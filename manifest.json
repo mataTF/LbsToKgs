@@ -7,7 +7,7 @@
   ],
   "background": {
     "scripts": ["background.js"],
-    "persistent": false
+    "persistent": true
   },
   "browser_action": {
     "default_title": "Convert from lbs to kg"
@@ -15,5 +15,13 @@
   "manifest_version": 2,
   "icons": { "16": "ceicon16.png",
            "48": "ceicon48.png",
-          "128": "ceicon128.png" }
+          "128": "ceicon128.png" },
+
+  "content_scripts": [
+    {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["content.js"]
+    }
+]
+
 }
