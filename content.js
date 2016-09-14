@@ -1,6 +1,6 @@
 document.addEventListener("dblclick", function(){
     var selection = window.getSelection().toString();
-    var lbs = parseInt(selection.replace( /^\D+/g, ''));
+    var lbs = parseFloat(selection.replace(/[^0-9.]/g, ''));
 
     if(isNaN(lbs)){
         return;
@@ -10,3 +10,8 @@ document.addEventListener("dblclick", function(){
         alert(kgs.toFixed(2) + " kgs"); 
     }
 });
+
+
+
+
+/* old regex /^\D+/g  */

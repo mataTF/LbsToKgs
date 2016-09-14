@@ -1,5 +1,5 @@
 var selection = window.getSelection().toString();
-var lbs = parseInt(selection.replace( /^\D+/g, ''));
+var lbs = parseFloat(selection.replace(/[^0-9.]/g, ''));
 
     if(isNaN(lbs)){
         console.log("not a number");
